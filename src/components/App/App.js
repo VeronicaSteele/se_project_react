@@ -50,9 +50,12 @@ function App() {
       <WeatherCard day={false} type="rainy" />
       <main className="main">
         <section id="card-section" className="card__section">
-          {defaultClothingItems.map((x) => {
-            return <ItemCard x={x} />;
-          })}
+          <div>Today is 75F. You may want to wear:</div>
+          <div className="card__items">
+            {defaultClothingItems.map((x) => (
+              <ItemCard x={x} />
+            ))}
+          </div>
         </section>
       </main>
     </div>

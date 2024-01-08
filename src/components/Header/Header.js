@@ -1,7 +1,7 @@
 import "./Header.css";
 
 const Header = () => {
-  console.log("header");
+  // console.log("header");
   return (
     <header className="header">
       <div className="header__logo">
