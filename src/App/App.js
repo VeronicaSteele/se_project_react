@@ -1,7 +1,7 @@
 // import logo from "";
 import "./App.css";
-import Header from "../Header/Header";
-import WeatherCard from "../WeatherCard/WeatherCard";
+import Header from "../Components/Header/Header";
+import WeatherCard from "../Components/WeatherCard/WeatherCard";
 
 function App() {
   return (
