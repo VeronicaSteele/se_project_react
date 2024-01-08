@@ -1,16 +1,60 @@
 const weatherOptions = [
-  { ur: "../images/day-sunny.svg", day: true, type: "sunny" },
-  { ur: "../images/day-cloudy.svg", day: true, type: "cloudy" },
-  { ur: "../images/day-rainy.svg", day: true, type: "rainy" },
-  { ur: "../images/day-stormy.svg", day: true, type: "stormy" },
-  { ur: "../images/day-snowy.svg", day: true, type: "snowy" },
-  { ur: "../images/day-foggy.svg", day: true, type: "foggy" },
-  { ur: "../images/night-clear.svg", day: false, type: "clear" },
-  { ur: "../images/night-cloudy.svg", day: false, type: "cloudy" },
-  { ur: "../images/night-rainy.svg", day: false, type: "rainy" },
-  { ur: "../images/night-stormy.svg", day: false, type: "stormy" },
-  { ur: "../images/night-snowy.svg", day: false, type: "snowy" },
-  { ur: "../images/night-foggy.svg", day: false, type: "foggy" },
+  { ur: require("../images/day-sunny.svg").default, day: true, type: "sunny" },
+  {
+    ur: require("../images/day-cloudy.svg").default,
+    day: true,
+    type: "cloudy",
+  },
+  {
+    ur: require("../images/day-rainy.svg").default,
+    day: true,
+    type: "rainy",
+  },
+  {
+    ur: require("../images/day-stormy.svg").default,
+    day: true,
+    type: "stormy",
+  },
+  {
+    ur: require("../images/day-snowy.svg").default,
+    day: true,
+    type: "snowy",
+  },
+  {
+    ur: require("../images/day-foggy.svg").default,
+    day: true,
+    type: "foggy",
+  },
+  {
+    ur: require("../images/night-clear.svg").default,
+    day: false,
+    type: "clear",
+  },
+  {
+    ur: require("../images/night-cloudy.svg").default,
+    day: false,
+    type: "cloudy",
+  },
+  {
+    ur: require("../images/night-rainy.svg").default,
+    day: false,
+    type: "rainy",
+  },
+  {
+    ur: require("../images/night-stormy.svg").default,
+    day: false,
+    type: "stormy",
+  },
+  {
+    ur: require("../images/night-snowy.svg").default,
+    day: false,
+    type: "snowy",
+  },
+  {
+    ur: require("../images/night-foggy.svg").default,
+    day: false,
+    type: "foggy",
+  },
 ];
 
 const WeatherCard = ({ day, type }) => {
