@@ -8,7 +8,7 @@ import ItemModal from "../ItemModal/ItemModal";
 import { useState } from "react";
 
 function App() {
-  const weatherTemp = "75 F";
+  const weatherTemp = 75;
 
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
