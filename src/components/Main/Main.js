@@ -1,6 +1,6 @@
 import { defaultClothingItems } from "../util/constants";
 import WeatherCard from "../WeatherCard/WeatherCard";
-import ItemCard from "../ItemModal/ItemCard";
+import ItemCard from "../ItemCard/ItemCard";
 
 function Main({ weatherTemp }) {
   return (
@@ -9,8 +9,8 @@ function Main({ weatherTemp }) {
       <section id="card-section" className="card__section">
         <div>Today is {weatherTemp}. You may want to wear:</div>
         <div className="card__items">
-          {defaultClothingItems.map((x) => (
-            <ItemCard x={x} />
+          {defaultClothingItems.map((item) => (
+            <ItemCard x={item} />
           ))}
         </div>
       </section>
