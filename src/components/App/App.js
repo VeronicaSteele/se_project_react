@@ -4,13 +4,14 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ItemModal from "../ItemModal/ItemModal";
 import { useState } from "react";
 
 function App() {
   const weatherTemp = "75 F";
 
   const [activeModal, setActiveModal] = useState("");
-  const { selectedCard, setSelectedCard } = useState({});
+  const [selectedCard, setSelectedCard] = useState({});
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -21,6 +22,7 @@ function App() {
   };
 
   const handleSelectedCard = (card) => {
+    setActiveModal("preview");
     setSelectedCard(card);
   };
   console.log(selectedCard);
@@ -56,13 +58,9 @@ function App() {
           </div>
         </ModalWithForm>
       )}
-      <div className={` modal `}>
-        <div className="modal__content">
-          <img></img>
-          <div>Text for the item name</div>
-          <div>Weather Type</div>
-        </div>
-      </div>
+      {activeModal === "preview" && (
+        <ItemModal selectedCard={selectedCard} onclose={handleCloseModal} />
+      )}
     </div>
   );
 }
