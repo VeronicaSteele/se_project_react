@@ -8,22 +8,23 @@ export const getForecastWeather = () => {
   const weatherApi = fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
   ).then((res) => {
-    console.log(res);
     if (res.ok) {
-      return parseWeatherData(res.json());
+      return res.json();
     } else {
       return Promise.reject(`Error: ${res.status}`);
     }
   });
-  return weatherApi;
+  .then((data)=>{
+    return parseWeatherData(data)
+  });
+
 };
 
-const parseWeatherData = (data) => {
-  console.log(data);
+export const parseWeatherData = (data) => {
   const weather = data.main;
-  // const temperature = main && main[0].temp;
-  // console.log(temperature);
-  // return temperature;
+  const temperature = data.main.temp;
+  console.log(temperature);
+  return temperature;
 };
 
 const response = {
