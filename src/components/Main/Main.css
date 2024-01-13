@@ -1,6 +1,8 @@
 .main {
   padding: 0 20px;
   font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "CabinetGrotesk-Black", sans-serif;
+  font-weight: 700;
 }
 
 .card__section {

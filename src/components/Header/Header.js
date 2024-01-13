@@ -1,6 +1,6 @@
 import "./Header.css";
 
-const Header = ({ onCreateModal }) => {
+const Header = ({ onCreateModal, temperature }) => {
   // console.log("header");
   return (
     <header className="header">
@@ -8,7 +8,7 @@ const Header = ({ onCreateModal }) => {
         <div>
           <img alt="logo" src={require("../images/Logo.svg").default}></img>
         </div>
-        <div>Date</div>
+        <div>Jan. 13th, 2024</div>
       </div>
       <div className="header__avatar-logo">
         <div>
@@ -21,7 +21,7 @@ const Header = ({ onCreateModal }) => {
             +Add New Clothes
           </button>
         </div>
-        <div>Name</div>
+        <div>Veronica Steele</div>
         <div>
           <img alt="avatar" src={require("../images/Avatar.svg").default}></img>
         </div>

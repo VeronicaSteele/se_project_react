@@ -1,5 +1,5 @@
 const Footer = () => {
-  console.log("footer");
+  // console.log("footer");
   return (
     <footer className="footer">
       <div>Developed by Veronica Steele</div>

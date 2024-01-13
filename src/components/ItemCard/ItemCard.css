@@ -1,5 +1,7 @@
 .card__name {
   text-align: center;
+  font-family: "CabinetGrotesk-Black", sans-serif;
+  font-weight: 700;
 }
 
 .card__image {
