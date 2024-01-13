@@ -28,7 +28,7 @@ function App() {
   };
 
   useEffect(() => {
-    getForecastWeather().then((date) => {
+    getForecastWeather().then((data) => {
       // console.log(data);
       parseWeatherData(data);
     });

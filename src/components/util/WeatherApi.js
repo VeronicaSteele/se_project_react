@@ -5,19 +5,19 @@ const longitude = 10.99;
 const APIkey = "6979e3eb862bfbec92f2555b8e476ef5";
 
 export const getForecastWeather = () => {
-  const weatherApi = fetch(
+  return fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
-  ).then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      return Promise.reject(`Error: ${res.status}`);
-    }
-  });
-  .then((data)=>{
-    return parseWeatherData(data)
-  });
-
+  )
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
+      }
+    })
+    .then((data) => {
+      return parseWeatherData(data);
+    });
 };
 
 export const parseWeatherData = (data) => {
