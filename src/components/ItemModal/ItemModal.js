@@ -3,9 +3,11 @@ const ItemModal = ({ selectedCard, onclose }) => {
   return (
     <div className={` modal `}>
       <div className="modal__content">
-        <button type="button" onClick={onclose}>
-          Close
-        </button>
+        <button
+          type="button"
+          onClick={onclose}
+          className="preview_close-btn"
+        ></button>
         <img src={selectedCard.link}></img>
         <div>{selectedCard.name}</div>
         <div>Weather Type:{selectedCard.weather}</div>
