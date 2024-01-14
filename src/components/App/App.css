@@ -1,1 +1,13 @@
+.weather_selector:checked {
+  background-color: black;
+}
 
+.name_input {
+  width: 440px;
+  height: 52px;
+}
+
+.image_input {
+  width: 440px;
+  height: 52px;
+}

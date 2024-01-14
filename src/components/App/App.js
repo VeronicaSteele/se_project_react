@@ -33,11 +33,11 @@ function App() {
       // console.log(data);
       // parseWeatherData(data);
       const temperature = parseWeatherData(data);
-      console.log(temperature);
+      // console.log(temperature);
       setTemp(temperature);
     });
   }, []);
-  console.log(temperature);
+  // console.log(temperature);
   return (
     <div>
       <Header onCreateModal={handleCreateModal} />
@@ -49,16 +49,16 @@ function App() {
       <Footer />
       {activeModal === "create" && (
         <ModalWithForm title="New Garment" onclose={handleCloseModal}>
-          <label>
+          <label className="name_input">
             Name
             <input type="text" name="name" minLength="1" maxLength="30" />
           </label>
-          <label>
+          <label className="image_input">
             Image
             <input type="url" name="link" minLength="1" maxLength="30" />
           </label>
           <p>Select the weather type:</p>
-          <div>
+          <div className="weather_selector">
             <div>
               <input type="radio" id="hot" value="hot" />
               <label>Hot</label>
