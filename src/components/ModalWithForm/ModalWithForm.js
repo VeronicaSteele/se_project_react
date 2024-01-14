@@ -12,7 +12,7 @@ const ModalWithForm = ({
     <div className={` modal modal_type_${name}`}>
       <div className="modal__content">
         <button
-          className="close_button"
+          className="modal__close-button"
           type="button"
           onClick={onclose}
         ></button>

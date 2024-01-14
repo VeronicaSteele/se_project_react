@@ -8,7 +8,8 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "CabinetGrotesk-Black", sans-serif;
+  font-weight: 700;
 }
 
 .modal__content {
@@ -18,12 +19,31 @@
   border-radius: 20px;
   padding: 34px 36px;
 }
-.close_button {
-  justify-content: flex-end;
+/* .modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("../images/close.svg");
   height: 16px;
   width: 16px;
   border: none;
+} */
+.modal__close-button {
+  border: none;
+  background-image: url(../images/close.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal__close-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 .submit_button {
   height: 36px;
@@ -35,8 +55,5 @@
 }
 .submit_button:hover {
   background-color: gray;
-}
-.name_input {
-  height: 52;
-  width: 440px;
+  cursor: pointer;
 }
