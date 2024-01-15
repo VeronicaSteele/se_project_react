@@ -7,7 +7,7 @@
 
 .preview_close-btn {
   border: none;
-  background-image: url(../images/close.svg);
+  background-image: url(../../images/close.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;

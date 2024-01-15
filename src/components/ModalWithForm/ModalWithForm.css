@@ -25,20 +25,10 @@
   flex-direction: column;
   gap: 15px;
 }
-/* .modal__close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../images/close.svg");
-  height: 16px;
-  width: 16px;
-  border: none;
-} */
+
 .modal__close-button {
   border: none;
-  background-image: url(../images/close.svg);
+  background-image: url(../../images/close.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
