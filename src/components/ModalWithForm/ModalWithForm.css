@@ -64,3 +64,6 @@
   background-color: gray;
   cursor: pointer;
 }
+.submit_button:disabled {
+  background-color: lightgray;
+}
