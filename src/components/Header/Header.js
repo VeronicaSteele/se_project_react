@@ -1,4 +1,5 @@
 import "./Header.css";
+import logoImage from "../../images/Logo.svg";
 
 const Header = ({ onCreateModal, temperature }) => {
   // console.log("header");
@@ -6,7 +7,7 @@ const Header = ({ onCreateModal, temperature }) => {
     <header className="header">
       <div className="header__logo">
         <div>
-          <img alt="logo" src={require("../../images/Logo.svg").default}></img>
+          <img alt="logo" src={logoImage}></img>
         </div>
         <div>Jan. 13th, 2024</div>
       </div>
@@ -21,7 +22,7 @@ const Header = ({ onCreateModal, temperature }) => {
             +Add New Clothes
           </button>
         </div>
-        <div>Veronica Steele</div>
+        <h3>Veronica Steele</h3>
         <div>
           <img
             alt="avatar"

@@ -10,7 +10,7 @@ const ItemModal = ({ selectedCard, onclose }) => {
           onClick={onclose}
           className="preview_close-btn"
         ></button>
-        <img src={selectedCard.link}></img>
+        <img alt={selectedCard.name} src={selectedCard.link}></img>
         <div>{selectedCard.name}</div>
         <div>Weather Type:{selectedCard.weather}</div>
       </div>

@@ -28,13 +28,17 @@ function App() {
   };
 
   useEffect(() => {
-    getForecastWeather().then((data) => {
-      // console.log(data);
-      // parseWeatherData(data);
-      const temperature = parseWeatherData(data);
-      // console.log(temperature);
-      setTemp(temperature);
-    });
+    getForecastWeather()
+      .then((data) => {
+        // console.log(data);
+        // parseWeatherData(data);
+        const temperature = parseWeatherData(data);
+        // console.log(temperature);
+        setTemp(temperature);
+      })
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+      });
   }, []);
   // console.log(temperature);
   return (
@@ -73,16 +77,16 @@ function App() {
           <p>Select the weather type:</p>
           <div className="weather_selector">
             <div>
-              <input type="radio" id="hot" value="hot" />
-              <label>Hot</label>
+              <input type="radio" id="hot" name="weather" value="hot" />
+              <label htmlFor="hot">Hot</label>
             </div>
             <div>
-              <input type="radio" id="warm" value="warm" />
-              <label>Warm</label>
+              <input type="radio" id="warm" name="weather" value="warm" />
+              <label htmlFor="warm">Warm</label>
             </div>
             <div>
-              <input type="radio" id="cold" value="cold" />
-              <label>Cold</label>
+              <input type="radio" id="cold" name="weather" value="cold" />
+              <label htmlFor="cold">Cold</label>
             </div>
           </div>
         </ModalWithForm>
