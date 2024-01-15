@@ -49,13 +49,27 @@ function App() {
       <Footer />
       {activeModal === "create" && (
         <ModalWithForm title="New Garment" onclose={handleCloseModal}>
-          <label className="name_input">
+          <label className="modal__input-label">
             Name
-            <input type="text" name="name" minLength="1" maxLength="30" />
+            <input
+              className="modal__input"
+              type="text"
+              name="name"
+              minLength="1"
+              maxLength="30"
+              placeholder="Name"
+            />
           </label>
-          <label className="image_input">
+          <label className="modal__input-label">
             Image
-            <input type="url" name="link" minLength="1" maxLength="30" />
+            <input
+              className="modal__input"
+              type="url"
+              name="link"
+              minLength="1"
+              maxLength="30"
+              placeholder="Image URL"
+            />
           </label>
           <p>Select the weather type:</p>
           <div className="weather_selector">

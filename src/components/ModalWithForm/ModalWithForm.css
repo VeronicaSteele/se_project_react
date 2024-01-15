@@ -18,6 +18,12 @@
   width: 100%;
   border-radius: 20px;
   padding: 34px 36px;
+  position: relative;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 /* .modal__close-button {
   position: absolute;
@@ -52,6 +58,7 @@
   color: white;
   border-radius: 5px;
   justify-content: center;
+  align-self: center;
 }
 .submit_button:hover {
   background-color: gray;

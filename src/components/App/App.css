@@ -1,13 +1,14 @@
 .weather_selector:checked {
   background-color: black;
 }
-
-.name_input {
-  width: 440px;
-  height: 52px;
+.modal__input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-.image_input {
-  width: 440px;
-  height: 52px;
+.modal__input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid black;
 }

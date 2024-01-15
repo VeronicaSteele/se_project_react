@@ -2,7 +2,9 @@
   font-family: "Cabinet Grotesk", sans-serif;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
 .preview_close-btn {
   border: none;
   background-image: url(../images/close.svg);
@@ -10,6 +12,8 @@
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
-  position: relative;
+  position: absolute;
   justify-content: flex-end;
+  top: 24px;
+  right: 24px;
 }
