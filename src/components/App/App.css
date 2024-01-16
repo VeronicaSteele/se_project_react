@@ -12,3 +12,9 @@
   border: none;
   border-bottom: 1px solid black;
 }
+.modal__buttons {
+  align-items: center;
+}
+/* .modal__overlay {
+  opacity: 0.5;
+} */

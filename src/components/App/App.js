@@ -13,6 +13,13 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temperature, setTemp] = useState(0);
+  const [image, setImage] = useState("");
+  // console.log(image);
+
+  const handleOnChange = (imageValue) => {
+    console.log("imageValue", imageValue);
+    setImage(imageValue);
+  };
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -52,41 +59,44 @@ function App() {
       <Footer />
       {activeModal === "create" && (
         <ModalWithForm title="New Garment" onclose={handleCloseModal}>
-          <label className="modal__input-label">
-            Name
-            <input
-              className="modal__input"
-              type="text"
-              name="name"
-              minLength="1"
-              maxLength="30"
-              placeholder="Name"
-            />
-          </label>
-          <label className="modal__input-label">
-            Image
-            <input
-              className="modal__input"
-              type="url"
-              name="link"
-              minLength="1"
-              maxLength="30"
-              placeholder="Image URL"
-            />
-          </label>
-          <p>Select the weather type:</p>
-          <div className="weather_selector">
-            <div>
-              <input type="radio" id="hot" name="weather" value="hot" />
-              <label htmlFor="hot">Hot</label>
-            </div>
-            <div>
-              <input type="radio" id="warm" name="weather" value="warm" />
-              <label htmlFor="warm">Warm</label>
-            </div>
-            <div>
-              <input type="radio" id="cold" name="weather" value="cold" />
-              <label htmlFor="cold">Cold</label>
+          <div className="modal__overlay">
+            <label className="modal__input-label">
+              Name
+              <input
+                className="modal__input"
+                type="text"
+                name="name"
+                minLength="1"
+                maxLength="30"
+                placeholder="Name"
+              />
+            </label>
+            <label className="modal__input-label">
+              Image
+              <input
+                className="modal__input"
+                type="url"
+                name="link"
+                minLength="1"
+                maxLength="30"
+                placeholder="Image URL"
+                onChange={(input) => handleOnChange(input.target.value)}
+              />
+            </label>
+            <p>Select the weather type:</p>
+            <div className="weather_selector">
+              <div className="modal__buttons">
+                <input type="radio" id="hot" name="weather" value="hot" />
+                <label htmlFor="hot">Hot</label>
+              </div>
+              <div>
+                <input type="radio" id="warm" name="weather" value="warm" />
+                <label htmlFor="warm">Warm</label>
+              </div>
+              <div>
+                <input type="radio" id="cold" name="weather" value="cold" />
+                <label htmlFor="cold">Cold</label>
+              </div>
             </div>
           </div>
         </ModalWithForm>
