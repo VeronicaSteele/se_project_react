@@ -1,12 +1,12 @@
 @font-face {
   font-family: "CabinetGrotesk-Bold";
-  font-weight: 700;
+  font-weight: 900;
   src: url(../vendor/CabinetGrotesk-Bold.woff) format("woff");
 }
 
 @font-face {
   font-family: "CabinetGrotesk-Black";
-  font-weight: 900;
+  font-weight: 700;
   src: url(../vendor/CabinetGrotesk-Black.woff) format("woff");
 }
 
