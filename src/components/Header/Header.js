@@ -1,5 +1,7 @@
+import React from "react";
 import "./Header.css";
 import logoImage from "../../images/Logo.svg";
+import avatarImage from "../../images/Avatar.svg";
 
 const Header = ({ onCreateModal, temperature }) => {
   // console.log("header");
@@ -18,16 +20,12 @@ const Header = ({ onCreateModal, temperature }) => {
             onClick={onCreateModal}
             className="add_clothes-button"
           >
-            {" "}
             +Add New Clothes
           </button>
         </div>
         <h3>Veronica Steele</h3>
         <div>
-          <img
-            alt="avatar"
-            src={require("../../images/Avatar.svg").default}
-          ></img>
+          <img alt="avatar" src={avatarImage}></img>
         </div>
       </div>
     </header>

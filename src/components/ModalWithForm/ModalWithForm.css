@@ -47,8 +47,6 @@
   background-color: black;
   color: white;
   border-radius: 5px;
-  justify-content: center;
-  align-self: center;
 }
 
 .submit_button:hover {
