@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import logoImage from "../../images/Logo.svg";
 import avatarImage from "../../images/Avatar.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 const Header = ({ onCreateModal, temperature }) => {
   // console.log("header");
@@ -14,6 +15,7 @@ const Header = ({ onCreateModal, temperature }) => {
         <div>Jan. 13th, 2024</div>
       </div>
       <div className="header__avatar-logo">
+        <ToggleSwitch />
         <div>
           <button
             type="text"
