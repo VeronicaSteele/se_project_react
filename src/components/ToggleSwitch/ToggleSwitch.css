@@ -39,7 +39,10 @@
 }
 
 .switch__temp-F {
+  position: absolute;
   top: -9px;
+  left: 35px;
+  color: white;
 }
 
 .switch__temp-C {
