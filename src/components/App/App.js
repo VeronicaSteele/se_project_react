@@ -14,6 +14,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [temperature, setTemp] = useState(0);
   const [image, setImage] = useState("");
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   // console.log(image);
 
   const handleOnChange = (imageValue) => {
