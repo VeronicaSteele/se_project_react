@@ -3,6 +3,7 @@ import "./Header.css";
 import logoImage from "../../images/Logo.svg";
 import avatarImage from "../../images/Avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import { Link } from "react-router-dom";
 
 const Header = ({ onCreateModal, temperature }) => {
   // console.log("header");
@@ -10,7 +11,9 @@ const Header = ({ onCreateModal, temperature }) => {
     <header className="header">
       <div className="header__logo">
         <div>
-          <img alt="logo" src={logoImage}></img>
+          <Link to="/">
+            <img alt="logo" src={logoImage}></img>
+          </Link>
         </div>
         <div>Jan. 13th, 2024</div>
       </div>
@@ -25,7 +28,7 @@ const Header = ({ onCreateModal, temperature }) => {
             +Add New Clothes
           </button>
         </div>
-        <h3>Veronica Steele</h3>
+        <Link to="/profile">Veronica Steele</Link>
         <div>
           <img alt="avatar" src={avatarImage}></img>
         </div>
