@@ -5,26 +5,34 @@ import { useMemo, useContext } from "react";
 import "./Main.css";
 import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
 
-function Main({ weatherTemp, onSelectCard }) {
+function Main({ weatherTemp, onSelectCard, cards }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   console.log(currentTemperatureUnit);
-  const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || 999;
+  const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || null;
   const weatherType = useMemo(() => {
-    if (weatherTemp >= 86) {
+    if (temp >= 86) {
       return "hot";
-    } else if (weatherTemp >= 66 && weatherTemp <= 85) {
+    } else if (temp >= 66 && temp <= 85) {
       return "warm";
-    } else if (weatherTemp <= 65) {
+    } else if (temp <= 65) {
       return "cold";
     }
-  }, [weatherTemp]);
+  }, [temp]);
+
+  // if (temp >= 30) {
+  //   return "hot";
+  // } else if (temp >= 19 && temp <= 29) {
+  //   return "warm";
+  // } else if (temp <= 18) {
+  //   return "cold";
+  // }
 
   // console.log(weatherType);
-  const filteredCards = defaultClothingItems.filter((item) => {
-    // console.log(item);
+  const filteredCards = cards.filter((item) => {
+    console.log(item.weather, weatherType);
     return item.weather.toLowerCase() === weatherType;
   });
-  // console.log(filteredCards);
+  console.log(filteredCards);
 
   return (
     <main className="main">
