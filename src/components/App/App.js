@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { getForecastWeather, parseWeatherData } from "../../utils/WeatherApi";
 import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
-import { getItems } from "../../utils/api.js";
+import { deleteItems, addItems, getItems } from "../../utils/api.js";
 import AddItemModal from "../AddItemModal/AddItemModal";
 
 function App() {
@@ -38,12 +38,26 @@ function App() {
     setActiveModal("preview");
     setSelectedCard(card);
   };
-  // handleDeleteModal = (card)=>{
-
-  // }
+  const handleDeleteModal = (card) => {
+    console.log(card);
+    deleteItems(card._id).then(() => {
+      console.log(" I didnt see the then");
+      //close the modal
+      //filter out the delete card using card._id
+    });
+    // .then?
+  };
 
   const onAddItem = (values) => {
     console.log(values);
+    addItems(values).then((res) => {
+      console.log(res);
+
+      //close the modal
+      // add new item/res to items
+      setCards((cards) => [...cards, res]);
+      handleCloseModal();
+    });
   };
 
   const handleToggleSwitchChange = () => {
@@ -89,7 +103,11 @@ function App() {
           />
         )}
         {activeModal === "preview" && (
-          <ItemModal selectedCard={selectedCard} onclose={handleCloseModal} />
+          <ItemModal
+            selectedCard={selectedCard}
+            onClose={handleCloseModal}
+            onCardDelete={handleDeleteModal}
+          />
         )}
       </CurrentTemperatureUnitContext.Provider>
     </div>

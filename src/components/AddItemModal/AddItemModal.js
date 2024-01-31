@@ -15,9 +15,15 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
     setUrl(e.target.value);
   };
 
+  const [weather, setWeather] = useState("");
+  const handleWeatherChange = (e) => {
+    console.log(e.target.value);
+    setWeather(e.target.value);
+  };
+
   const handleSubmit = (e) => {
-    e.preventDefaul();
-    onAddItem({ name, link });
+    e.preventDefault();
+    onAddItem({ name, imageUrl: link, weather });
   };
   return (
     <ModalWithForm
@@ -47,7 +53,6 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
             type="url"
             name="link"
             minLength="1"
-            maxLength="30"
             placeholder="Image URL"
             value={link}
             onChange={handleUrlChange}
@@ -63,6 +68,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
               name="weather"
               value="hot"
               className="input__button"
+              onChange={handleWeatherChange}
             />
             <label htmlFor="hot">Hot</label>
           </div>
@@ -73,6 +79,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
               name="weather"
               value="warm"
               className="input__button"
+              onChange={handleWeatherChange}
             />
             <label htmlFor="warm">Warm</label>
           </div>
@@ -83,6 +90,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
               name="weather"
               value="cold"
               className="input__button"
+              onChange={handleWeatherChange}
             />
             <label htmlFor="cold">Cold</label>
           </div>

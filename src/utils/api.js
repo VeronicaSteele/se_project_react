@@ -1,4 +1,5 @@
 // const baseUrl = "http://localhost:3001";
+// //  GET request
 export const getItems = () => {
   return fetch(`http://localhost:3001/items`).then((res) => {
     if (res.ok) {
@@ -9,14 +10,8 @@ export const getItems = () => {
   });
 };
 
-// //  GET request
-// fetch(`${"http://localhost:3001"}/items`)
-//   .then((response) => response.json())
-//   .then((data) => console.log("GET response:", data))
-//   .catch((error) => console.error("GET error:", error));
-
+// POST request
 export const addItems = (data) => {
-  // POST request
   return fetch(`${"http://localhost:3001"}/items`, {
     method: "POST",
     headers: {
@@ -33,13 +28,18 @@ export const addItems = (data) => {
 };
 
 // DELETE request
-// fetch(`${"http://localhost:3001"}/items/${card}`, {
-//   method: "DELETE",
-// })
-//   .then((response) => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! Status: ${response.status}`);
-//     }
-//     console.log("DELETE success");
-//   })
-//   .catch((error) => console.error("DELETE error:", error));
+export const deleteItems = (id) => {
+  return fetch(`${"http://localhost:3001"}/items/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    // body: JSON.stringify(data),
+  }).then((res) => {
+    if (res.ok) {
+      return res.json();
+    } else {
+      return Promise.reject(`Error: ${res.status}`);
+    }
+  });
+};

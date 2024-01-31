@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import "./WeatherCard.css";
 import { weatherOptions } from "../../utils/constants";
 import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
 
 const WeatherCard = ({ day, type, weatherTemp }) => {
+  const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   // useEffect(() => {
   //   fetch("http://localhost:3001/items").then((data) => console.log(data));
   // }, []);
@@ -18,7 +19,9 @@ const WeatherCard = ({ day, type, weatherTemp }) => {
   return (
     <section className="weather" id="weather">
       {weatherTemp !== null && (
-        <div className="weather__info">{weatherTemp} F</div>
+        <div className="weather__info">
+          {weatherTemp} {currentTemperatureUnit}
+        </div>
       )}
       <img src={imageSrcUrl} alt="weather display" className="weather__image" />
     </section>
