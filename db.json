@@ -7,12 +7,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591"
     },
     {
-      "_id": 3,
-      "name": "Coat",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4"
-    },
-    {
       "_id": 4,
       "name": "Dress",
       "weather": "hot",
@@ -91,10 +85,16 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "name": "Navy",
-      "imageUrl": "https://media.nomadicmatt.com/2023/bostonitinerary.jpeg",
-      "weather": "cold",
+      "name": "Veronica",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
+      "weather": "hot",
       "_id": 17
+    },
+    {
+      "name": "test",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-114951227.jpg?crop=1xw:1.0xh;center,top&resize=1200:*",
+      "weather": "warm",
+      "_id": 18
     }
   ]
 }

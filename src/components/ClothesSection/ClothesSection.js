@@ -1,9 +1,14 @@
 import ItemCard from "../ItemCard/ItemCard";
+import { defaultClothingItems } from "../../utils/constants";
 
-const ClothesSection = ({ clothingItems, handleCreateModal, onSelectCard }) => {
+const ClothesSection = ({
+  defaultClothingItems,
+  handleCreateModal,
+  onSelectCard,
+}) => {
   return (
     <div className="clothes__section">
-      <div className="Clother__section">
+      <div className="clothes__section">
         <p className="clothes__title">Your items</p>
         <button
           className="clothes__button"

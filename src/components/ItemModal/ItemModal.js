@@ -1,8 +1,6 @@
 import "./ItemModal.css";
 
 const ItemModal = ({ selectedCard, onClose, onCardDelete }) => {
-  // console.log("item Modal");
-  // can I use a hook to delete an image?
   return (
     <div className={` modal `}>
       <div className="modal__content">

@@ -41,11 +41,14 @@ function App() {
   const handleDeleteModal = (card) => {
     console.log(card);
     deleteItems(card._id).then(() => {
-      console.log(" I didnt see the then");
+      // console.log(" I didnt see the then");
+      handleCloseModal();
       //close the modal
-      //filter out the delete card using card._id
+      const updatedCards = cards.filter((item) => item._id !== card._id);
+      // .catch((error) => {
+      //   console.error("Error deleting item:", error);
+      // });
     });
-    // .then?
   };
 
   const onAddItem = (values) => {
