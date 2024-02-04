@@ -10,6 +10,7 @@ import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUni
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
 import { deleteItems, addItems, getItems } from "../../utils/api.js";
 import AddItemModal from "../AddItemModal/AddItemModal";
+import Profile from "../Profile/Profile.js";
 
 function App() {
   const weatherTemp = 75;
@@ -95,7 +96,9 @@ function App() {
               cards={cards}
             />
           </Route>
-          <Route path="/profile">Profile</Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
         </Switch>
         <Footer />
         {activeModal === "create" && (

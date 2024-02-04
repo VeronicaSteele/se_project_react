@@ -1,13 +1,13 @@
-import avatar from "../../images/wtwr-avatar.svg";
-import "./SideBar.css";
+import Avatar from "../../images/Avatar.svg";
+import "./Sidebar.css";
 
 const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__info">
-        <img src={avatar} className="sidebar__image" alt="sidebar-avatar" />
+        <img src={Avatar} className="sidebar__image" alt="sidebar-avatar" />
         <div>
-          <p className="sidebar__name">Veronica Steele</p>
+          <p className="sidebar__name">User</p>
         </div>
       </div>
     </div>
