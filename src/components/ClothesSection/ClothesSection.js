@@ -1,11 +1,6 @@
 import ItemCard from "../ItemCard/ItemCard";
-import { defaultClothingItems } from "../../utils/constants";
 
-const ClothesSection = ({
-  defaultClothingItems,
-  handleCreateModal,
-  onSelectCard,
-}) => {
+const ClothesSection = ({ cards, handleCreateModal, onSelectCard }) => {
   return (
     <div className="clothes__section">
       <div className="clothes__section">
@@ -19,7 +14,7 @@ const ClothesSection = ({
         </button>
       </div>
       <div className="clothes__items">
-        {defaultClothingItems.map((item) => {
+        {cards.map((item) => {
           return (
             <ItemCard key={item._id} item={item} onSelectCard={onSelectCard} />
           );

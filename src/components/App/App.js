@@ -11,6 +11,8 @@ import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
 import { deleteItems, addItems, getItems } from "../../utils/api.js";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile.js";
+import { defaultClothingItems } from "../../utils/constants.js";
+import ClothesSection from "../ClothesSection/ClothesSection.js";
 
 function App() {
   const weatherTemp = 75;
@@ -97,7 +99,11 @@ function App() {
             />
           </Route>
           <Route path="/profile">
-            <Profile />
+            <Profile
+              onSelectCard={handleSelectedCard}
+              onCreateModal={handleCreateModal}
+              cards={cards}
+            />
           </Route>
         </Switch>
         <Footer />
