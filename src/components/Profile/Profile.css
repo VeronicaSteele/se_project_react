@@ -2,18 +2,3 @@
   display: flex;
   max-width: 1440px;
 }
-
-.profile__clothesSection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-self: center;
-  color: black;
-}
-
-/* .profile__clothesSection_header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-} */

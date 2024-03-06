@@ -2,24 +2,17 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  max-height: 56px;
+  /* max-height: 56px; */
   display: flex;
   align-items: center;
   padding: 0 20px;
+  min-width: 100px;
 }
 
-/* .profile__avatar_name {
-  font-family: "Cabinet Grotesk";
-  font-size: 20px;
-  font-weight: 700;
-} */
-
-.sidebar__info {
-  width: 100px;
-}
 .sidebar__name {
   font-family: "Cabinet Grotesk";
   font-size: 20px;
   font-weight: 700;
   color: black;
+  text-align: center;
 }

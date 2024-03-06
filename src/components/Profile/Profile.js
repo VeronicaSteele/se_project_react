@@ -8,13 +8,12 @@ const Profile = ({ onSelectCard, onCreateModal, cards }) => {
       <div className="profile__sidebar">
         <SideBar />
       </div>
-      <div className="profile__clothesSection">
-        <ClothesSection
-          cards={cards}
-          onSelectCard={onSelectCard}
-          handleCreateModal={onCreateModal}
-        />
-      </div>
+
+      <ClothesSection
+        cards={cards}
+        onSelectCard={onSelectCard}
+        handleCreateModal={onCreateModal}
+      />
     </div>
   );
 };
