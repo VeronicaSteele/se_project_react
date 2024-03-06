@@ -4,7 +4,7 @@ import "./ClothesSection.css";
 const ClothesSection = ({ cards, handleCreateModal, onSelectCard }) => {
   return (
     <div className="clothes__section">
-      <div className="clothes__section">
+      <div className="clothes__border">
         <p className="clothes__title">Your items</p>
         <button
           className="clothes__button"

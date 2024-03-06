@@ -1,11 +1,35 @@
-.profile__clothesSection {
+.clothes__section {
+  display: flex;
+  font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 500;
+}
+.clothes__border {
+  margin-top: 50px;
+}
+/* .clothes__title {
+  font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 500;
+} */
+
+.clothes__button {
+  border: none;
+  height: 25px;
+  width: 88px;
+  /* font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 500; */
+}
+
+.clothes__items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   max-width: 1015px;
-  font-family: "Cabinet Grotesk";
+  /* font-family: "Cabinet Grotesk";
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 500; */
   color: black;
 }

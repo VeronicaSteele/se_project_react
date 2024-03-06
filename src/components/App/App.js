@@ -44,10 +44,10 @@ function App() {
   const handleDeleteModal = (card) => {
     console.log(card);
     deleteItems(card._id).then(() => {
-      // console.log(" I didnt see the then");
       handleCloseModal();
       //close the modal
       const updatedCards = cards.filter((item) => item._id !== card._id);
+      setCards(updatedCards);
       // .catch((error) => {
       //   console.error("Error deleting item:", error);
       // });

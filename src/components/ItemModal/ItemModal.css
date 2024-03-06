@@ -25,3 +25,6 @@
   position: absolute;
   justify-content: flex-end;
 }
+.modal__image {
+  width: 100%;
+}
