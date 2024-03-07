@@ -5,7 +5,15 @@ import avatarImage from "../../images/Avatar.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
 
-const Header = ({ onCreateModal, temperature }) => {
+function getDate() {
+  const currentDate = new Date().toLocaleDateString("default", {
+    month: "long",
+    day: "numeric",
+  });
+  return <span>{currentDate}</span>;
+}
+
+const Header = ({ onCreateModal, temperature, location }) => {
   // console.log("header");
   return (
     <header className="header">
@@ -15,7 +23,8 @@ const Header = ({ onCreateModal, temperature }) => {
             <img alt="logo" src={logoImage}></img>
           </Link>
         </div>
-        <div>Jan. 13th, 2024</div>
+        <div className="date">{getDate}</div>
+        <div className="location">{location}</div>
       </div>
       <div className="header__avatar-logo">
         <ToggleSwitch />

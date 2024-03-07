@@ -16,13 +16,13 @@ import ClothesSection from "../ClothesSection/ClothesSection.js";
 
 function App() {
   const weatherTemp = 75;
-
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
   const [image, setImage] = useState("");
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [cards, setCards] = useState([]);
+  const [location, setLocation] = useState("");
 
   const handleOnChange = (imageValue) => {
     console.log("imageValue", imageValue);
@@ -84,7 +84,7 @@ function App() {
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}
     >
-      <Header onCreateModal={handleCreateModal} />
+      <Header onCreateModal={handleCreateModal} location={location} />
       <Switch>
         <Route exact path="/">
           <Main
