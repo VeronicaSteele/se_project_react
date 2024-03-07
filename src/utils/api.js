@@ -1,13 +1,21 @@
 // const baseUrl = "http://localhost:3001";
 // //  GET request
+
+const checkResponse = (res) => {
+  if (res.ok) {
+    return res.json();
+  } else {
+    return Promise.reject(`Error: ${res.status}`);
+  }
+};
+
+// GET request
 export const getItems = () => {
-  return fetch(`http://localhost:3001/items`).then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      return Promise.reject(`Error: ${res.status}`);
-    }
-  });
+  return fetch(`http://localhost:3001/items`)
+    .then((res) => checkResponse(res))
+    .catch((error) => {
+      console.error("Error fetching items:", error);
+    });
 };
 
 // POST request
@@ -18,13 +26,12 @@ export const addItems = (data) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      return Promise.reject(`Error: ${res.status}`);
-    }
-  });
+  })
+    .then((res) => checkResponse(res))
+    .catch((error) => {
+      console.error("Error adding items:", error);
+      throw error;
+    });
 };
 
 // DELETE request
@@ -34,12 +41,10 @@ export const deleteItems = (id) => {
     headers: {
       "Content-Type": "application/json",
     },
-    // body: JSON.stringify(data),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      return Promise.reject(`Error: ${res.status}`);
-    }
-  });
+  })
+    .then((res) => checkResponse(res))
+    .catch((error) => {
+      console.error("Error deleting items:", error);
+      throw error;
+    });
 };
