@@ -15,13 +15,15 @@ const ItemModal = ({ selectedCard, onClose, onCardDelete }) => {
           src={selectedCard.imageUrl}
         ></img>
         <h3 className="modal__item-name">{selectedCard.name}</h3>
-        <div>Weather Type:{selectedCard.weather}</div>
-        <button
-          className="delete__button"
-          onClick={() => onCardDelete(selectedCard)}
-        >
-          Delete Item
-        </button>
+        <div className="weather__type">
+          Weather Type:{selectedCard.weather}
+          <button
+            className="delete__button"
+            onClick={() => onCardDelete(selectedCard)}
+          >
+            Delete Item
+          </button>
+        </div>
       </div>
     </div>
   );

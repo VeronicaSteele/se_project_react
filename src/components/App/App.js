@@ -74,6 +74,7 @@ function App() {
       console.log(temperature);
       setTemp(temperature);
       getItems().then((data) => setCards(data));
+      console.log(data);
     });
     // .catch((error) => {
     //   console.error("Error fetching weather data:", error);

@@ -1,5 +1,4 @@
-// const baseUrl = "http://localhost:3001";
-// //  GET request
+const baseUrl = "http://localhost:3001";
 
 const checkResponse = (res) => {
   if (res.ok) {
@@ -11,7 +10,7 @@ const checkResponse = (res) => {
 
 // GET request
 export const getItems = () => {
-  return fetch(`http://localhost:3001/items`)
+  return fetch(`${baseUrl}/items`)
     .then((res) => checkResponse(res))
     .catch((error) => {
       console.error("Error fetching items:", error);
@@ -20,7 +19,7 @@ export const getItems = () => {
 
 // POST request
 export const addItems = (data) => {
-  return fetch(`${"http://localhost:3001"}/items`, {
+  return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +35,7 @@ export const addItems = (data) => {
 
 // DELETE request
 export const deleteItems = (id) => {
-  return fetch(`${"http://localhost:3001"}/items/${id}`, {
+  return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
