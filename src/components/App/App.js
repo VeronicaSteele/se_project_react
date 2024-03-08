@@ -70,6 +70,7 @@ function App() {
 
   useEffect(() => {
     getForecastWeather().then((data) => {
+      console.log(data);
       const temperature = parseWeatherData(data);
       console.log(temperature);
       setTemp(temperature);

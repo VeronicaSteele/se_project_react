@@ -23,11 +23,12 @@
   color: orange;
   border: none;
   justify-self: flex-end;
+  /* grid-template-rows: ; */
 }
 .modal__image {
   width: 100%;
 }
 
-.weather__type {
+.modal__item-name {
   display: grid;
 }
