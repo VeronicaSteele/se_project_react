@@ -84,7 +84,7 @@ function App() {
         console.error("Error fetching weather data:", error);
       });
   }, []);
-  console.log(cards);
+
   return (
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}

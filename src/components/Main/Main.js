@@ -7,7 +7,7 @@ import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperature
 
 function Main({ weatherTemp, onSelectCard, cards }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  console.log(currentTemperatureUnit);
+  // console.log(currentTemperatureUnit);
   const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || null;
   const weatherType = useMemo(() => {
     if (currentTemperatureUnit === "F") {
@@ -34,7 +34,7 @@ function Main({ weatherTemp, onSelectCard, cards }) {
     console.log(item.weather, weatherType);
     return item.weather.toLowerCase() === weatherType;
   });
-  console.log(filteredCards);
+  // console.log(filteredCards);
 
   return (
     <main className="main">
