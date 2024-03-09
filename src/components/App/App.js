@@ -42,11 +42,9 @@ function App() {
     setSelectedCard(card);
   };
   const handleDeleteModal = (card) => {
-    // console.log(card);
     deleteItems(card._id)
       .then(() => {
         handleCloseModal();
-        //close the modal
         const updatedCards = cards.filter((item) => item._id !== card._id);
         setCards(updatedCards);
       })
@@ -56,10 +54,8 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    // console.log(values);
-
     addItems(values).then((res) => {
-      setCards((cards) => [res, ...cards]); // Add new card to the start
+      setCards((cards) => [res, ...cards]);
       handleCloseModal();
     });
   };
@@ -72,13 +68,10 @@ function App() {
   useEffect(() => {
     getForecastWeather()
       .then((data) => {
-        // console.log(data);
         const temperature = parseWeatherData(data);
-        // console.log(temperature);
         setTemp(temperature);
         getItems().then((data) => setCards(data));
         setLocation(data.name);
-        // console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching weather data:", error);
