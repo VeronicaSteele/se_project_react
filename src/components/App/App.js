@@ -41,6 +41,7 @@ function App() {
     setActiveModal("preview");
     setSelectedCard(card);
   };
+
   const handleDeleteModal = (card) => {
     deleteItems(card._id)
       .then(() => {
@@ -54,10 +55,14 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    addItems(values).then((res) => {
-      setCards((cards) => [res, ...cards]);
-      handleCloseModal();
-    });
+    addItems(values)
+      .then((res) => {
+        setCards((cards) => [res, ...cards]);
+        handleCloseModal();
+      })
+      .catch((error) => {
+        console.error("Error adding item:", error);
+      });
   };
 
   const handleToggleSwitchChange = () => {

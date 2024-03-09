@@ -10,11 +10,10 @@ export const checkResponse = (res) => {
 
 // GET request
 export const getItems = () => {
-  return fetch(`${baseUrl}/items`)
-    .then((res) => checkResponse(res))
-    .catch((error) => {
-      console.error("Error fetching items:", error);
-    });
+  return fetch(`${baseUrl}/items`).then((res) => checkResponse(res));
+  // .catch((error) => {
+  //   console.error("Error fetching items:", error);
+  // });
 };
 
 // POST request
@@ -25,12 +24,11 @@ export const addItems = (data) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  })
-    .then((res) => checkResponse(res))
-    .catch((error) => {
-      console.error("Error adding items:", error);
-      throw error;
-    });
+  }).then((res) => checkResponse(res));
+  // .catch((error) => {
+  //   console.error("Error adding items:", error);
+  //   throw error;
+  // });
 };
 
 // DELETE request
@@ -40,10 +38,9 @@ export const deleteItems = (id) => {
     headers: {
       "Content-Type": "application/json",
     },
-  })
-    .then((res) => checkResponse(res))
-    .catch((error) => {
-      console.error("Error deleting items:", error);
-      throw error;
-    });
+  }).then((res) => checkResponse(res));
+  // .catch((error) => {
+  //   console.error("Error deleting items:", error);
+  //   throw error;
+  // });
 };
