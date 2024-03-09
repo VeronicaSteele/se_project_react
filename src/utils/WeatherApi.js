@@ -1,4 +1,4 @@
-import checkResponse from "../utils/api.js";
+import { checkResponse } from "../utils/api.js";
 
 const latitude = 42.36;
 const longitude = -71.05;
@@ -21,7 +21,7 @@ export const parseWeatherData = (data) => {
       C: Math.round(((temperature - 32) * 5) / 9),
     },
   };
-  console.log(temperature);
+  // console.log(temperature);
   return weather;
 };
 

@@ -56,7 +56,7 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    console.log(values);
+    // console.log(values);
 
     addItems(values).then((res) => {
       setCards((cards) => [res, ...cards]); // Add new card to the start
@@ -72,13 +72,13 @@ function App() {
   useEffect(() => {
     getForecastWeather()
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const temperature = parseWeatherData(data);
-        console.log(temperature);
+        // console.log(temperature);
         setTemp(temperature);
         getItems().then((data) => setCards(data));
         setLocation(data.name);
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching weather data:", error);

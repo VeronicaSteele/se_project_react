@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3001";
 
-const checkResponse = (res) => {
+export const checkResponse = (res) => {
   if (res.ok) {
     return res.json();
   } else {
@@ -44,4 +44,4 @@ export const deleteItems = (id) => {
   //   throw error;
   // });
 };
-export default { checkResponse };
+// export default { checkResponse };
