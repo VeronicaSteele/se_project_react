@@ -15,6 +15,10 @@ function getDate() {
 
 const Header = ({ onCreateModal, temperature, location }) => {
   // console.log("header");
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
   return (
     <header className="header">
       <div className="header__logo">
@@ -23,8 +27,10 @@ const Header = ({ onCreateModal, temperature, location }) => {
             <img alt="logo" src={logoImage}></img>
           </Link>
         </div>
-        <div className="date">{getDate}</div>
-        <div className="location">{location}</div>
+        <div className="header__location">
+          <div className="date">{currentDate},</div>
+          <div className="location">{location} </div>
+        </div>
       </div>
       <div className="header__avatar-logo">
         <ToggleSwitch />
@@ -37,7 +43,7 @@ const Header = ({ onCreateModal, temperature, location }) => {
             +Add New Clothes
           </button>
         </div>
-        <Link to="/profile">Veronica Steele</Link>
+        <Link to="/profile">User</Link>
         <div>
           <img alt="avatar" src={avatarImage}></img>
         </div>

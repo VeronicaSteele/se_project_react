@@ -43,15 +43,16 @@ function App() {
   };
   const handleDeleteModal = (card) => {
     // console.log(card);
-    deleteItems(card._id).then(() => {
-      handleCloseModal();
-      //close the modal
-      const updatedCards = cards.filter((item) => item._id !== card._id);
-      setCards(updatedCards);
-    });
-    // .catch((error) => {
-    //   console.error("Error deleting item:", error);
-    // });
+    deleteItems(card._id)
+      .then(() => {
+        handleCloseModal();
+        //close the modal
+        const updatedCards = cards.filter((item) => item._id !== card._id);
+        setCards(updatedCards);
+      })
+      .catch((error) => {
+        console.error("Error deleting item:", error);
+      });
   };
 
   const onAddItem = (values) => {
@@ -69,17 +70,19 @@ function App() {
   };
 
   useEffect(() => {
-    getForecastWeather().then((data) => {
-      console.log(data);
-      const temperature = parseWeatherData(data);
-      console.log(temperature);
-      setTemp(temperature);
-      getItems().then((data) => setCards(data));
-      console.log(data);
-    });
-    // .catch((error) => {
-    //   console.error("Error fetching weather data:", error);
-    // });
+    getForecastWeather()
+      .then((data) => {
+        console.log(data);
+        const temperature = parseWeatherData(data);
+        console.log(temperature);
+        setTemp(temperature);
+        getItems().then((data) => setCards(data));
+        setLocation(data.name);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+      });
   }, []);
   console.log(cards);
   return (

@@ -33,3 +33,12 @@
   line-height: 24px;
   font-style: normal;
 }
+.header__location {
+  display: flex;
+  align-items: baseline;
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+}
