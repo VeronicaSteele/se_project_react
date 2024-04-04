@@ -17,7 +17,8 @@
     "start": "nodemon index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npx eslint ."
   },
   "eslintConfig": {
     "extends": [
